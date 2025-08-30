@@ -5,7 +5,7 @@ import { FlatList, Image, Pressable, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 export default function Index() {
   return (
-    <SafeAreaView>
+    <SafeAreaView className="flex-1 bg-white">
       <FlatList
         data={offers}
         renderItem={({ item, index }) => {
@@ -17,6 +17,7 @@ export default function Index() {
                   "offer-card",
                   isEven ? "flex-row-reverse" : "flex-row"
                 )}
+                android_ripple={{ color: "#fffff22" }}
                 style={{ backgroundColor: item.color }}
               >
                 {({ pressed }) => (
@@ -28,7 +29,12 @@ export default function Index() {
                         resizeMode={"contain"}
                       />
                     </View>
-                    <View className={"offer-card__info"}>
+                    <View
+                      className={cn(
+                        "offer-card__info",
+                        isEven ? "pl-10" : "pr-10"
+                      )}
+                    >
                       <Text className="h1-bold text-white loading-tight">
                         {item.title}
                       </Text>
@@ -45,6 +51,7 @@ export default function Index() {
             </View>
           );
         }}
+        contentContainerClassName="pb-28 px-5"
       />
     </SafeAreaView>
   );
