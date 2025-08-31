@@ -66,7 +66,7 @@ const SignUp = () => {
           Already have an account?
         </Text>
         <Link href="/sign-in" className="base-bold text-primary">
-          Sign In
+          Sign Up
         </Link>
       </View>
     </View>
