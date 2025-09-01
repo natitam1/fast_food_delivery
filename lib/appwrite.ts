@@ -13,12 +13,12 @@ export const appwriteConfig = {
   projectId: process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID!,
   platform: "com.natnael.foodordering",
   databaseId: "68b48c3100199337d969",
-  // bucketId: '68643e170015edaa95d7',
+  bucketId: "68b5b2c90037c246383b",
   userCollectionId: "user",
-  // categoriesCollectionId: '68643a390017b239fa0f',
-  // menuCollectionId: '68643ad80027ddb96920',
-  // customizationsCollectionId: '68643c0300297e5abc95',
-  // menuCustomizationsCollectionId: '68643cd8003580ecdd8f'
+  categoriesCollectionId: "categories",
+  menuCollectionId: "menu",
+  customizationsCollectionId: "customizations",
+  menuCustomizationsCollectionId: "menu_customizations",
 };
 
 export const client = new Client();
